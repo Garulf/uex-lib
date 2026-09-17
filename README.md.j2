@@ -24,6 +24,7 @@ Requires Python 3.11 or newer.
 import asyncio
 from uex import AsyncClient
 
+
 async def main():
     async with AsyncClient() as uex:
         prices = await uex.commodities.prices(id_terminal=1)
@@ -32,6 +33,7 @@ async def main():
 
         route = await uex.commodities.routes(id_commodity=1)
         vehicles = await uex.vehicles.list(id_company=195)
+
 
 asyncio.run(main())
 ```
@@ -70,13 +72,13 @@ If the API is down or returns a 5xx after retries, an expired entry is served wi
 ```python
 from uex import Client, MemoryStore, SqliteStore, LruFront
 
-uex = Client()                                   # SQLite + LRU, the default
-uex = Client(cache=MemoryStore())                # per-process only
+uex = Client()  # SQLite + LRU, the default
+uex = Client(cache=MemoryStore())  # per-process only
 uex = Client(cache=LruFront(SqliteStore("/srv/uex.db")))
-uex = Client(cache=None)                         # no caching at all
+uex = Client(cache=None)  # no caching at all
 
-uex.commodities.prices(id_terminal=1, fresh=True)   # bypass the cache for one call
-uex.purge_cache(endpoint="commodities_prices")      # drop one endpoint's cache
+uex.commodities.prices(id_terminal=1, fresh=True)  # bypass the cache for one call
+uex.purge_cache(endpoint="commodities_prices")  # drop one endpoint's cache
 ```
 
 ## Bring your own HTTP library
