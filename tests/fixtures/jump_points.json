@@ -1,0 +1,46 @@
+{
+ "status": "ok",
+ "http_code": 200,
+ "data": [
+  {
+   "id": 1,
+   "id_star_system_origin": 68,
+   "id_star_system_destination": 64,
+   "id_orbit_origin": 360,
+   "id_orbit_destination": 398,
+   "date_added": 1741181167,
+   "date_modified": 1764136268,
+   "star_system_origin_name": "Stanton",
+   "star_system_destination_name": "Pyro",
+   "orbit_origin_name": "Pyro Gateway (Stanton system)",
+   "orbit_destination_name": "Stanton Gateway (Pyro system)"
+  },
+  {
+   "id": 2,
+   "id_star_system_origin": 64,
+   "id_star_system_destination": 68,
+   "id_orbit_origin": 398,
+   "id_orbit_destination": 360,
+   "date_added": 1741181167,
+   "date_modified": 1764138022,
+   "star_system_origin_name": "Pyro",
+   "star_system_destination_name": "Stanton",
+   "orbit_origin_name": "Stanton Gateway (Pyro system)",
+   "orbit_destination_name": "Pyro Gateway (Stanton system)"
+  },
+  {
+   "id": 3,
+   "id_star_system_origin": 55,
+   "id_star_system_destination": 64,
+   "id_orbit_origin": 396,
+   "id_orbit_destination": 395,
+   "date_added": 1761966931,
+   "date_modified": 1764136357,
+   "star_system_origin_name": "Nyx",
+   "star_system_destination_name": "Pyro",
+   "orbit_origin_name": "Pyro Gateway (Nyx system)",
+   "orbit_destination_name": "Nyx Gateway (Pyro system)"
+  }
+ ],
+ "message": ""
+}

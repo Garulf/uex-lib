@@ -72,4 +72,3 @@ def test_urllib_maps_errors() -> None:
 def test_resolvers() -> None:
     assert isinstance(resolve_sync(1.0), UrllibTransport)
     assert isinstance(resolve_async(1.0), AsyncHttpxTransport)
-

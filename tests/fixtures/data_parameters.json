@@ -1,0 +1,41 @@
+{
+ "status": "ok",
+ "http_code": 200,
+ "data": {
+  "global": {
+   "is_accepting_reports": 1,
+   "is_accepting_ptu_reports": 0,
+   "is_datacenter_enabled": 1,
+   "game_version": "4.10.1",
+   "game_version_ptu": null,
+   "evaluation_period_days": 90
+  },
+  "commodity": {
+   "is_accepted": 1,
+   "is_temporary_enabled": 1,
+   "price_variation": 25,
+   "scu_variation": 5000,
+   "ttl": 15,
+   "notification": "Please note: **Local Market Values** may differ from actual transaction prices. Always report the value shown in the terminal (**Local Market**)."
+  },
+  "item": {
+   "is_accepted": 1,
+   "price_variation": 100,
+   "ttl": 60,
+   "notification": "Please note: Quick buy prices for **weapons** and some **turrets** may be inaccurate. Check the confirmation window for the correct price."
+  },
+  "vehicle_rent": {
+   "is_accepted": 1,
+   "price_variation": 60,
+   "ttl": 60,
+   "notification": null
+  },
+  "vehicle_buy": {
+   "is_accepted": 1,
+   "price_variation": 10,
+   "ttl": 60,
+   "notification": null
+  }
+ },
+ "message": ""
+}
