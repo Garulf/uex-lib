@@ -1,6 +1,6 @@
 """Python client for the UEX Corp API."""
 
-__version__ = "0.0.0"  # x-release-please-version
+__version__ = "0.1.0"  # x-release-please-version
 
 from uex._http import AsyncTransport, Request, Response, SyncTransport
 from uex.cache import CacheStore, LruFront, MemoryStore, SqliteStore
