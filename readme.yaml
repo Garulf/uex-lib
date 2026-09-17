@@ -1,0 +1,8 @@
+project:
+  name: uex-lib
+  tagline: Python client for the UEX Corp API with TTL caching and pluggable HTTP transports
+  pypi: uex-lib
+  license: MIT
+  owner: Garulf
+  repo: uex-lib
+badges: [pypi, python, ci, license, ruff]
