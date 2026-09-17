@@ -17,7 +17,7 @@ def test_hierarchy() -> None:
     assert issubclass(ServerError, ApiError)
     assert issubclass(ApiError, UexError)
     assert issubclass(AuthRequired, UexError)
-    assert issubclass(MissingParameter, (UexError, ValueError))
+    assert issubclass(MissingParameter, UexError | ValueError)
 
 
 def test_auth_required_message() -> None:

@@ -57,4 +57,4 @@ def test_fixture_scalar_fields_are_typed_or_none(endpoint_name: str) -> None:
             value = getattr(obj, field_name)
             if value is None:
                 continue
-            assert isinstance(value, (bool, int, float, str))
+            assert isinstance(value, bool | int | float | str)
