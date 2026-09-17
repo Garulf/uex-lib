@@ -9,6 +9,7 @@ nested objects) is left for callers to read from ``raw``.
 
 from __future__ import annotations
 
+import types
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass, field, fields
 from typing import Any, ClassVar, TypeVar, Union, get_args, get_origin, get_type_hints
@@ -36,7 +37,8 @@ def _hints(cls: type[Any]) -> Mapping[str, Any]:
 
 
 def _scalar(hint: Any) -> Any:
-    if get_origin(hint) is Union:
+    origin = get_origin(hint)
+    if origin is Union or origin is types.UnionType:
         args = [a for a in get_args(hint) if a is not type(None)]
         return args[0] if len(args) == 1 else None
     return hint
