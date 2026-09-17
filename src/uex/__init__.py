@@ -17,6 +17,7 @@ from uex.errors import (
     TransportError,
     UexError,
 )
+from uex.links import trade_route_detail_url, trade_routes_url
 
 __all__ = [
     "ApiError",
@@ -40,4 +41,6 @@ __all__ = [
     "TransportError",
     "UexError",
     "__version__",
+    "trade_route_detail_url",
+    "trade_routes_url",
 ]

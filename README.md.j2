@@ -92,6 +92,21 @@ session = aiohttp.ClientSession()
 uex = AsyncClient(transport=AiohttpTransport(session))
 ```
 
+## Website links
+
+`uex.trade_routes_url()` and `uex.trade_route_detail_url()` build links to the UEX Corp website's trade route finder rather than calling the API, so you can hand a pre-filled search or a specific route to a person:
+
+```python
+from uex import trade_routes_url, trade_route_detail_url
+
+trade_routes_url(id_vehicle=147, investment=20_000)
+# -> "https://uexcorp.space/trade/routes/?id_vehicle=147&investment=20%2C000"
+
+route = await uex.commodities.routes(id_commodity=1)
+trade_route_detail_url(route[0].code)
+# -> "https://uexcorp.space/trade/route?code=9db9ca68"
+```
+
 ## Development
 
 ```sh
