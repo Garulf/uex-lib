@@ -46,6 +46,13 @@ def test_game_versions_is_flat_single_object() -> None:
     assert gv.ptu is None
 
 
+def test_empty_string_numeric_fields_become_none() -> None:
+    v = Vehicle.from_payload({"id": "", "scu": "", "name": "100i"})
+    assert v.id is None
+    assert v.scu is None
+    assert v.name == "100i"
+
+
 def test_meta_is_attached() -> None:
     meta = ResultMeta(endpoint="vehicles", cached=True)
     v = Vehicle.from_payload({}, meta)

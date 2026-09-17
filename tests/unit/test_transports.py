@@ -72,3 +72,12 @@ def test_urllib_maps_errors() -> None:
 def test_resolvers() -> None:
     assert isinstance(resolve_sync(1.0), UrllibTransport)
     assert isinstance(resolve_async(1.0), AsyncHttpxTransport)
+
+
+async def test_async_client_resolves_transport_lazily() -> None:
+    from uex import AsyncClient
+
+    client = AsyncClient(cache=None)
+    assert client._transport is None
+    assert isinstance(client._get_transport(), AsyncHttpxTransport)
+    await client.aclose()

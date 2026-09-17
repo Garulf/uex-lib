@@ -46,6 +46,8 @@ def _coerce(hint: Any, value: Any) -> Any:
     if value is None:
         return None
     target = _scalar(hint)
+    if target in (bool, int, float) and value == "":
+        return None
     if target is bool:
         return value if isinstance(value, bool) else bool(int(value))
     if target is int:
